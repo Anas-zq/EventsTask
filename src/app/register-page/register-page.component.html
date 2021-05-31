@@ -1,0 +1,25 @@
+<div class="container"> 
+    <form  [formGroup]="loginForm" (ngSubmit)="submitForm(loginForm.value)">
+        <div class="element">
+            <h2> Register</h2>
+            </div>
+        <div class="element">
+          <label  for="uname">User Name : </label>
+            <input style="margin-left: 4.3%;" #uname type="text"  formControlName="uname"  placeholder="Input User Name"/>
+        </div>
+        
+        <div  class="element">
+            <label  for="psw">Password : </label>
+              <input style="margin-left: 5%;" #psw type="password"  formControlName="psw"  placeholder="Input Password"/>
+        </div>
+    
+        
+      
+        <div style="margin-left: 10%;" class="element">
+            <button class="btnCanceltyle" type="button" (click)="cancel()">  Cancel </button>
+            <button class="btnstyle" type="submit" >  Save </button>
+           
+        </div>
+    
+      </form>
+    </div>

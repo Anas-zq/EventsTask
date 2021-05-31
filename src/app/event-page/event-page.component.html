@@ -1,0 +1,19 @@
+<div  style="display:flex;">
+    <div style="margin-left: 5%;  border-bottom: 2px solid black"> <h1 > Events </h1> </div>
+    <div style="flex: 1;  border-bottom: 2px solid black"> </div>
+    <div style="margin-right: 9.5%;  border-bottom: 2px solid black">  <button class="btnstyle" (click)="addCard()">  Add Event </button> </div>
+</div>
+<div  class="grid-container"  >
+    <div *ngFor="let item of cards" class="grid-item card" >
+        <img src="../../assets/download.jpg" alt="Avatar" style="width:200px" height="160px">
+        <div [ngStyle]="{'color': item.color}" class="container">
+          <h4><b>{{item.name}}</b></h4>
+          <p>{{item.dateEvent}}</p>
+        </div>
+        <div style="display: flex;">
+            <button class="btnEditstyle" (click)="editCard(item)">  Edit  </button>
+           
+            <button class="btnDeletestyle" (click)="deleteCard(item)">  Delete  </button>
+        </div>
+      </div>
+</div>

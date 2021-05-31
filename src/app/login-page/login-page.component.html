@@ -1,0 +1,20 @@
+<div style="width: 40%; left: 30%;margin-top: 5%;position: relative;">
+<form  [formGroup]="loginForm" (ngSubmit)="submitForm(loginForm.value)">
+    <div class="imgcontainer">
+      <img src="../../assets/download.jpg" alt="Avatar" class="avatar">
+    </div>
+  
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" #uname placeholder="Enter Username" name="uname"  formControlName="uname"required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" #psw placeholder="Enter Password" name="psw" formControlName="psw" required>
+          
+      <button type="submit">Login</button>
+      <button type="button" (click)="register()" style="background-color: blue !important;">Register</button>
+    </div>
+  
+    
+  </form>
+</div>
